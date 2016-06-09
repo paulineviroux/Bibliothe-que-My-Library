@@ -8,14 +8,54 @@ class Books extends Model
 {
     protected $table = 'books';
 
+
+    public function add($data){
+
+        $author_id = array_pop($data);
+        $pdoStmnt = $this->save($data);
+        $book_id = $this->cn->lastInsertId('books');
+
+        
+        $sql = "INSERT INTO author_book(author_id, book_id) VALUE ($author_id, $book_id)";
+        $pdoStmnt = $this->cn->prepare($sql);
+        $pdoStmnt->execute();
+
+    }
+
     public function getBooksByAuthorsId($id){
-        $sql = ' SELECT DISTINCT books.* FROM books JOIN author_book ON books.id=author_book.book_id JOIN authors ON author_book.book_id=authors.id WHERE books.id = :id '; //books of the author??
+        $sql = ' SELECT DISTINCT books.* 
+                FROM books 
+                JOIN author_book ON books.id=author_book.book_id
+                WHERE author_book.author_id = :id'; 
 
         $pdoStmnt = $this->cn->prepare($sql);
         $pdoStmnt->execute([':id'=>$id]);
 
         return $pdoStmnt->fetchAll(); 
     }
+
+    public function getBooksList(){
+        $sql = 'SELECT id, title, cover FROM books';
+
+        $bookManyAuthors = 'SELECT author.id, author.name FROM author_book
+                            JOIN authors ON authors.id = author_book.author_id
+                            WHERE author_book.book_id = :id';
+
+        $pdoStmnt = $this->cn->prepare($sql);
+        $pdoStmnt->execute();
+
+        return $pdoStmnt->fetchAll(); 
+
+        foreach ($books as $book) {
+            $getBookAuthors = $this->cn->prepare($bookManyAuthors);
+            $getBookAuthors->execute(['id' => $book->id]);
+            $authors = $getBookAuthors->fetchAll();
+            $book->authors = $authors;
+        }
+
+        return $books;
+    }
+
     public function getBooksByEditorsId($id){
         $sql = 'SELECT books.*
                 FROM books
@@ -31,30 +71,14 @@ class Books extends Model
         $sql = 'SELECT books.title, authors.name, books.cover as cover, books.id as books_id, authors.id as authors_id FROM books 
                 JOIN author_book ON books.id = author_book.book_id 
                 JOIN authors ON author_book.author_id = authors.id 
-                ORDER BY books_id DESC LIMIT 5'; //requete pas terminée. Me renvoie des livres similaires(auteurs diff)
+                GROUP BY books_id ORDER BY books_id DESC LIMIT 5'; 
 
         $pdoStmnt = $this->cn->prepare($sql);
         $pdoStmnt->execute();
 
-        $result = $pdoStmnt->fetchAll();
+        return $pdoStmnt->fetchAll();
 
-        $books = array();
-
-        foreach ($result as $key => $book) {
-            
-            if(array_key_exists($book->books_id, $books)) {
-                $books[$book->books_id]['authors'][] = ['id' => $book->authors_id, 'name' => $book->name]; //[] ajoute une entrée au tableau courant
-            } else {
-                $books[$book->books_id] = array(
-                    'title' => $book->title,
-                    'book_id' => $book->books_id,
-                    'cover'   => $book->cover  
-                );
-                $books[$book->books_id]['authors'][] = ['id' => $book->authors_id, 'name' => $book->name];
-            }
-        }
-
-        return $books; 
+         
     }
 
 }

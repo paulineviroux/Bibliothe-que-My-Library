@@ -11,5 +11,5 @@
         <div class="search">
             <input class="search__input" type="text" placeholder="Harry Potter" name="search">
             <button class="search__button" type="submit"></button>  
-        </div>    
+        </div>
     </header>

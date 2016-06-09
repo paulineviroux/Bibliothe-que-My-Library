@@ -28,7 +28,8 @@ class Authors extends Model
                 JOIN editors ON books.editor_id = editors.id
                 WHERE editors.id = :id';
 
-        $pdoStmnt = $this->cn->prepare($sql); 
+        $pdoStmnt = $this->cn->prepare($sql);
+        $pdoStmnt->execute([':id'=>$id]); 
 
         return $pdoStmnt->fetchAll(); 
     }
@@ -37,6 +38,7 @@ class Authors extends Model
         $sql = 'SELECT authors.name, authors.photo FROM authors ORDER BY id DESC LIMIT 3';
 
         $pdoStmnt = $this->cn->prepare($sql);
+        $pdoStmnt->execute();
 
         return $pdoStmnt->fetchAll(); 
     }

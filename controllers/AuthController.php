@@ -8,12 +8,15 @@ class AuthController{
 
     private $user_model = null;
 
-
     public function __construct(User $user){
         $this->user_model = $user;
     }
 
     public function getLogin(){
+
+        if(isset($_SESSION['user']))
+            header('Location: ?a=admin&e=page');
+
         return ['view' => 'login.php', 'resource_title' => 'User login'];
     }
 
@@ -47,6 +50,7 @@ class AuthController{
         }
         header('Location: index.php');
     }
+
     public function postRegister(){
         $errors = [];
 
@@ -56,17 +60,17 @@ class AuthController{
             $errors['email'] = 'Enter a valid email';
         }
 
-        if (empty($_POST['name'])) {
-            $errors['name'] = 'Enter a username';
+        if (empty($_POST['pseudo'])) {
+            $errors['pseudo'] = 'Enter a username';
         }
 
         if (empty($_POST['password'])) {
             $errors['password'] = 'Enter a password';
-        } elseif (strlen($_POST['password'] < 5)) {
+        } elseif (strlen($_POST['password']) < 5) {
             $errors['password'] = 'Enter a password with at least 8 characters';
         }
 
-        if (count($errors)) {
+        if (count($errors) > 0) {
             $_SESSION['errors'] = $errors;
             $_SESSION['old_datas'] = $_POST;
             header('Location: index.php?e=auth&a=getRegister');
@@ -76,7 +80,7 @@ class AuthController{
         if ($this->user_model->save([
             'password' => sha1($_POST['password']),  //sha1 : algorithme qui produit une chaine de caractere qui crypte un password
             'email' => $_POST['email'], 
-            'name' => $_POST['name']
+            'name' => $_POST['pseudo']
         ])
         ){
             return ['view' => 'login.php', 'resource_title' => 'Please login'];
@@ -84,6 +88,9 @@ class AuthController{
             $_SESSION['errors'] = ['error' => 'Impossible to write in the database'];
             $_SESSION['old_datas'] = $_POST;
             header('Location: index.php?e=auth&a=getRegister');
-        }      
+        }   
+           
+        header('Location: index.php?e=auth&a=getLogin');
+        return;
     }
 }

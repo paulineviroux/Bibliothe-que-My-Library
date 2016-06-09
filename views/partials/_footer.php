@@ -1,3 +1,3 @@
 <footer class="footer">
-        <small>&copy;Pauline viroux</small>
+        <small>Pauline viroux</small>
 </footer>

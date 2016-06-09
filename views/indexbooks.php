@@ -6,13 +6,12 @@
             <ul class="books__list">
                 <?php foreach ( $datas[ 'books' ] as $book ) :?>
                     <li class="books__book">
-                        <a class="books__title" href="index.php?a=show&e=books&id=<?php echo $books -> id; ?>&with=authors,editors"><?php echo $book -> title; ?></a>
+                        <a class="books__title" href="index.php?a=show&e=books&id=<?php echo $book -> id; ?>&with=authors,editors"><?php echo $book -> title; ?></a>
                         <img src="<?php echo $book -> cover; ?>" alt="<?php if(isset($book->cover)): ?>Portrait de <?php echo $book -> title; ?><?php endif; ?>" />
-                        <?php if ( $datas[ 'authors' ]): ?>
-                        <?php foreach ($datas['authors'] as $author): ?>
-                            <a class="books__author" href="?a=show&e=authors&id=<?php echo $author->id; ?>&with=books"><?php echo $author['name'];?></a>
-                        <?php endforeach; ?> 
-                        <?php endif; ?>
+                        
+                        <?php foreach ($book->authors as $author): ?>
+                        <a class="books__author" href="?a=show&e=authors&id=<?php echo $author->id; ?>&with=books"><?php echo $author -> name;?></a>
+                        <?php endforeach; ?>
                     </li>
                 <?php endforeach; ?>
             </ul>

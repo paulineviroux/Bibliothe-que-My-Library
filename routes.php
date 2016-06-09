@@ -3,6 +3,7 @@
 $routes = [
     'show_books',
     'index_books',
+    'add_books',
     'index_authors',
     'show_authors',
     'index_editors',

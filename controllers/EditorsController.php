@@ -1,14 +1,14 @@
 <?php
 namespace Controller;
 
-use Model\Editors;
+use Model\Editors; 
 use Model\Books;
 use Model\Authors;
 
 class EditorsController
 {
     private $editors_model = null;
-
+ 
     public function __construct() 
     {
         $this -> editors_model = new Editors(); 
@@ -19,7 +19,6 @@ class EditorsController
         $data['page_title'] = 'Editors - MyLibrary';
         $data[ 'editors' ] = $this -> editors_model -> all();
         $data[ 'view' ] = 'views/indexeditors.php';
-        $data[ 'header' ] = 'views/partials/_header_small.php';
         
         return $data;
     }

@@ -1,5 +1,6 @@
 <?php if (!isset($_SESSION['user'])): ?>
-    <div class="correct">
+    
+    <div class="connect">
         <a class="connect__button" href="?a=getLogin&e=auth">Log in</a>
         <a class="connect__signin" href="?a=getRegister&e=auth">Sign up</a>
         <a class="connect__link" href="?a=getAdmin&e=auth">Admin</a>

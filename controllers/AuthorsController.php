@@ -46,7 +46,7 @@ class AuthorsController
 
             return [    'authors' => $author, 
                         'view' => 'showauthors.php',
-                        'page_title' => 'ebooks' . $author -> name,
+                        'page_title' => 'My Library' . $author -> name,
                         'books' => $books,
                         'editors' => $editors]; 
         } 

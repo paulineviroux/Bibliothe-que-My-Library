@@ -23,12 +23,12 @@ class PageController
     }
 
     public function show() {
-        $author =$this -> authors_model -> find( $id ); // ?
-        $book = $this -> books_model -> find( $id) ;    // ?
+        $author =$this -> authors_model -> find( $id ); 
+        $book = $this -> books_model -> find( $id) ;    
 
         return [    'books' => $book,
                     'view' => $view,
-                    'page_title' => 'ebooks - ' . $editor -> name,
+                    'page_title' => 'My library ' . $editor -> name,
                     'authors' => $author ];
 
     }
@@ -36,7 +36,10 @@ class PageController
         $last5books =  $this -> books_model -> getLast5Books();
         $last3authors = $this -> authors_model -> getLast3Authors();
 
-        return ['view' => 'home.php', 'page_title' => 'My Library', 'header'=>'partials/_header_big.php', 'books' => $last5books, 'authors' => $last3authors ];
+        return ['view' => 'home.php', 
+                'page_title' => 'My Library', 
+                'books' => $last5books, 
+                'authors' => $last3authors ];
     }
 
 }

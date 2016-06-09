@@ -17,9 +17,8 @@ class BooksController
 
     public function index() {
         $data[ 'page_title' ] = 'Books - MyLibrary';
-        $data[ 'books' ] = $this -> books_model -> all(); 
-        $data[ 'view' ] = 'views/' . $GLOBALS[ 'a' ] . $GLOBALS[ 'e' ] . '.php'; 
-        $data[ 'header' ] = 'views/partials/_header_small.php';
+        $data[ 'books' ] = $this -> books_model -> getBooksList();
+        $data[ 'view' ] = 'views/' . $GLOBALS[ 'a' ] . $GLOBALS[ 'e' ] . '.php';
         return $data;
     }
 
@@ -45,9 +44,52 @@ class BooksController
             }
         }
 
+        $view = 'showBooks.php';
 
-        return [ 'books' => $book, 'view' => 'showbooks.php', 'page_title' => 'ebooks -' . $book -> title, 'authors' => $authors, 'editors' => $editors ];
+        return ['book' => $book, 
+                'view' => $view, 
+                'page_title' => 'My Library' . $book -> title, 
+                'authors' => $authors, 
+                'editors' => $editors ];
 
+    }
+    public function add(){
+
+        // Si l'utiliateur est connecté !
+        if(isset($_SESSION['user'])){
+
+            $return = ["view" => "addbooks.php", "page_title" => "Ajouter un livre"];
+
+            if(isset($_POST['title'])){
+
+                $errors = [];
+
+                if(count($errors) > 0){
+                } else {
+
+                    $data = [
+                        "title" => $_POST['title'],
+                        "cover" => $_POST['cover'],
+                        "summary" => $_POST['summary'],
+                        "isbn" => $_POST['isbn'],
+                        "author_id" => $_POST['author_id']
+                   ];
+
+                    $this -> books_model -> add($data);
+                    
+                }
+
+            } else {
+
+                $authors_model = new Authors();
+                $return['authors'] = $authors_model->all();
+            }
+
+            return $return;
+
+        } else {
+            header('Location : ?a=getLogin&e=auth');
+        }
     }
 
 }

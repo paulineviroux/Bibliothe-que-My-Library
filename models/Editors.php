@@ -30,6 +30,4 @@ class Editors extends Model
 
         return $pdoStmnt->fetchAll(); 
     }
-
-
 }

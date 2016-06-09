@@ -151,7 +151,9 @@ html {
 html {
   font: normal 12px 'Raleway', sans-serif;
   color: black; }
-
+a{
+  text-decoration: none;
+}
 .headerHome {
   min-height: 30rem; }
 
@@ -273,7 +275,7 @@ html {
       border: none;
       position: relative;
       right: 3rem; }
-  .headerHome .connect {
+    .connect {
     position: absolute;
     top: 3.5rem;
     right: 14rem;
@@ -281,20 +283,20 @@ html {
     border-radius: 10rem;
     padding: .6rem 3.5rem .6rem 1rem;
     z-index: 0; }
-    .headerHome .connect__button {
+    .connect__button {
       text-decoration: none;
       color: black;
       font-size: 1.5rem;
       padding-right: 1.5rem; }
-    .headerHome .connect__signin {
+    .connect__signin {
       text-decoration: none;
       color: black;
       font-size: 1.5rem; }
-    .headerHome .connect__signin:hover, .headerHome .connect__signin:focus {
+    .connect__signin:hover, .headerHome .connect__signin:focus {
       color: #AC3F5B; }
-    .headerHome .connect__button:hover, .headerHome .connect__button:focus {
+    .connect__button:hover, .headerHome .connect__button:focus {
       color: #AC3F5B; }
-    .headerHome .connect__link {
+    .connect__link {
       text-decoration: none;
       font-size: 1.5rem;
       background-color: #F0B46A;
@@ -419,7 +421,8 @@ html {
     font-size: 1.7rem;
     padding-right: 2rem;
     font-weight: 300;
-    width: 300px; }
+    width: 300px;
+    color: black; }
   .mainPage .homepage__title__a{
     color: black;
     text-decoration: none;

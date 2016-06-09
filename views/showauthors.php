@@ -20,7 +20,7 @@
                 <ul class="books">
                 <?php foreach ($datas['books'] as $book): ?>
                     <li class="author__item">
-                        <a class="author__link" href="?a=show&e=books&id=<?php echo $author->id; ?>&with=authors,editors"><?php echo $book-> title; ?></a>
+                        <a class="author__link" href="?a=show&e=books&id=<?php echo $book->id; ?>&with=authors,editors"><?php echo $book-> title; ?></a>
                     </li>
                 <?php endforeach; ?>    
                 </ul>
