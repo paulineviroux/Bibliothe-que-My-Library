@@ -1,0 +1,1 @@
+<h1><?php echo $datas['resource_title']; ?></h1>

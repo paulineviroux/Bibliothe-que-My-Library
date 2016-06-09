@@ -1,0 +1,768 @@
+@charset "UTF-8";
+/* Bibliothèque de Pauline Viroux
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Pauline Viroux
+ */
+/* Bibliothèque de Pauline Viroux
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Pauline Viroux
+ */
+/* Bibliothèque de Pauline Viroux
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Pauline Viroux
+ */
+/* Bibliothèque de Pauline Viroux
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Pauline Viroux
+ */
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-regular-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-regular-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-regular-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-italic-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-italic-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-italic-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-italic-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-italic-webfont.svg#open_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-semibold-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-semibold-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-semibold-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-semibold-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-bold-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-bold-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-bold-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-bolditalic-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.svg#open_sansbold") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Glyphs';
+  src: url("../assets/fonts/fontawesome/fontawesome-webfont.eot");
+  src: url("../assets/fonts/fontawesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/fontawesome/fontawesome-webfont.woff2") format("woff2"), url("../assets/fonts/fontawesome/fontawesome-webfont.woff") format("woff"), url("../assets/fonts/fontawesome/fontawesome-webfont.ttf") format("truetype"), url("../assets/fonts/fontawesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Bibliothèque de Pauline Viroux
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Pauline Viroux
+ */
+/* Bibliothèque de Pauline Viroux
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Pauline Viroux
+ */
+/* Bibliothèque de Pauline Viroux
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Pauline Viroux
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Bibliothèque de Pauline Viroux
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Pauline Viroux
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* Bibliothèque de Pauline Viroux
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Pauline Viroux
+ */
+html {
+  font: normal 12px 'Raleway', sans-serif;
+  color: black; }
+
+.headerHome {
+  min-height: 30rem; }
+
+.header {
+  min-height: 10rem; }
+
+.aside {
+  float: right;
+  margin-right: 3.5rem;
+  margin-top: 4rem;
+  width: 15rem;
+  line-height: 1.5rem; }
+  .aside__item {
+    font-size: 1.2rem; }
+
+.mainPage {
+  min-height: 500px;
+  width: 65%; }
+
+.mainBooks {
+  min-height: 500px;
+  width: 71%; }
+
+.mainAuthors {
+  min-height: 500px;
+  width: 60%; }
+
+.mainEditors {
+  min-height: 500px;
+  width: 60%; }
+
+.categories {
+  min-height: 500px;
+  width: 71%; }
+
+.mainBook {
+  width: 40%;
+  min-height: 550px;
+  position: relative; }
+  .mainBook .book {
+    width: 65%; }
+    .mainBook .book__profil img {
+      float: left;
+      width: 225px; }
+
+.mainAuthor {
+  width: 40%;
+  min-height: 550px;
+  position: relative; }
+  .mainAuthor .author {
+    width: 65%; }
+    .mainAuthor .author img {
+      float: left;
+      width: 225px; }
+
+.mainEditor {
+  width: 60%;
+  min-height: 550px;
+  position: relative; }
+  .mainEditor .editor {
+    width: 65%; }
+
+.mainCategory {
+  width: 60%;
+  min-height: 550px;
+  position: relative; }
+  .mainCategory .category {
+    width: 65%; }
+
+.mainSign {
+  width: 30%; }
+
+.mainAdmin {
+  width: 40%; }
+
+.headerHome {
+  background: url("../assets/img/books-bcg.jpg") no-repeat;
+  background-size: 110%;
+  background-position: left 45%; }
+  .headerHome__title {
+    font-size: 9rem;
+    color: #fff;
+    font-family: "Honey Script";
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10rem; }
+  .headerHome .menu__list {
+    background-color: #F0B46A;
+    display: inline-block;
+    border-radius: 10rem;
+    padding: .8rem 1.5rem .8rem 2.5rem;
+    position: absolute;
+    top: 3rem;
+    left: -2.5rem; }
+  .headerHome .menu__item {
+    display: inline;
+    padding-left: 1rem; }
+    .headerHome .menu__item a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.7rem;
+      font-weight: 300; }
+    .headerHome .menu__item a:hover, .headerHome .menu__item a:focus {
+      color: #AC3F5B; }
+  .headerHome .search {
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    z-index: 10; }
+    .headerHome .search__input {
+      border: none;
+      border-radius: 10rem;
+      padding: .75rem 1rem .75rem 1rem;
+      background-color: #fff;
+      box-shadow: .1rem .1rem 0.5rem #96968E; }
+    .headerHome .search__button {
+      font-family: fontawesome;
+      background-color: transparent;
+      border: none;
+      position: relative;
+      right: 3rem; }
+  .headerHome .connect {
+    position: absolute;
+    top: 3.5rem;
+    right: 14rem;
+    background-color: #F0B46A;
+    border-radius: 10rem;
+    padding: .6rem 3.5rem .6rem 1rem;
+    z-index: 0; }
+    .headerHome .connect__button {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5rem;
+      padding-right: 1.5rem; }
+    .headerHome .connect__signin {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5rem; }
+    .headerHome .connect__signin:hover, .headerHome .connect__signin:focus {
+      color: #AC3F5B; }
+    .headerHome .connect__button:hover, .headerHome .connect__button:focus {
+      color: #AC3F5B; }
+    .headerHome .connect__link {
+      text-decoration: none;
+      font-size: 1.5rem;
+      background-color: #F0B46A;
+      border-radius: 10rem;
+      padding: .3rem 1rem .3rem 1.7rem;
+      color: #AC3F5B; }
+
+.header {
+  background: url("../assets/img/books-bcg.jpg") no-repeat;
+  background-size: 110%;
+  background-position: left 50%; }
+  .header__title {
+    font-size: 5rem;
+    color: #fff;
+    font-family: "Honey Script";
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2rem; }
+  .header .menu__list {
+    background-color: #F0B46A;
+    display: inline-block;
+    border-radius: 10rem;
+    padding: .8rem 1.5rem .8rem 2.5rem;
+    position: absolute;
+    top: 3rem;
+    left: -2.5rem; }
+  .header .menu__item {
+    display: inline;
+    padding-left: 1rem; }
+    .header .menu__item a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.7rem;
+      font-weight: 300; }
+    .header .menu__item a:hover, .header .menu__item a:focus {
+      color: #AC3F5B; }
+  .header .search {
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    z-index: 10; }
+    .header .search__input {
+      border: none;
+      border-radius: 10rem;
+      padding: .75rem 1rem .75rem 1rem;
+      background-color: #fff;
+      box-shadow: .1rem .1rem 0.5rem #96968E; }
+    .header .search__button {
+      font-family: fontawesome;
+      background-color: transparent;
+      border: none;
+      position: relative;
+      right: 3rem; }
+  .header .connect {
+    position: absolute;
+    top: 3.5rem;
+    right: 14rem;
+    background-color: #F0B46A;
+    border-radius: 10rem;
+    padding: .6rem 3.5rem .6rem 1rem;
+    z-index: 0; }
+    .header .connect__button {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5rem;
+      padding-right: 1.5rem; }
+    .header .connect__signin {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5rem; }
+    .header .connect__signin:hover, .header .connect__signin:focus {
+      color: #AC3F5B; }
+    .header .connect__button:hover, .header .connect__button:focus {
+      color: #AC3F5B; }
+    .header .connect__link {
+      text-decoration: none;
+      font-size: 1.5rem;
+      background-color: #F0B46A;
+      border-radius: 10rem;
+      padding: .3rem 1rem .3rem 1.7rem;
+      color: #AC3F5B; }
+
+.aside {
+  background-color: #F0B46A;
+  display: inline-block;
+  padding: 1rem 3rem 2rem;
+  border-radius: 1rem; }
+  .aside a {
+    text-decoration: none;
+    color: #fff; }
+  .aside a:hover, .aside a:focus {
+    color: #AC3F5B; }
+  .aside__title {
+    font-size: 1.5rem;
+    padding: .8rem 0 .5rem; }
+  .aside__item {
+    list-style-type: disc;
+    padding-left: 0.1rem; }
+
+.footer {
+  background-color: #D1C4B1;
+  padding-top: 5rem; }
+  .footer__designBy {
+    text-align: center; }
+
+.mainPage .homepage {
+  margin-left: 18%; }
+  .mainPage .homepage__head {
+    font-size: 5rem;
+    padding: 4rem 0 1rem 0;
+    border-bottom: 1px solid orange;
+    margin-bottom: 3rem;
+    font-family: 'Honey Script';
+    letter-spacing: 2px; }
+  .mainPage .homepage__item {
+    display: inline-block;
+    padding: 0 5.5rem 3rem 0; 
+    width: 314px;}
+    .mainPage .homepage__item img {
+      padding-top: 1rem; }
+  .mainPage .homepage__title {
+    font-size: 1.7rem;
+    padding-right: 2rem;
+    font-weight: 300;
+    width: 300px; }
+  .mainPage .homepage__title__a{
+    color: black;
+    text-decoration: none;
+    font-weight: 300;}
+
+  .mainPage .homepage__author {
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    display: block;
+    padding-top: .5rem; }
+  .mainPage .homepage__author:hover, .mainPage .homepage__author:focus {
+    color: #F0B46A; }
+
+.mainBooks .books {
+  margin-left: 18%; }
+  .mainBooks .books__head {
+    font-size: 5rem;
+    padding: 4rem 0 1rem 0;
+    border-bottom: 1px solid orange;
+    margin-bottom: 3rem;
+    font-family: 'Honey Script';
+    letter-spacing: 2px; }
+  .mainBooks .books__SearchOptions {
+    margin-bottom: 2rem; }
+  .mainBooks .books__label {
+    font-size: 1.3rem;
+    padding-right: 1rem; }
+  .mainBooks .books__selectlist {
+    background: transparent;
+    border: 1px solid grey;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    /* If you add too much padding here, the options won't show in IE */
+    width: 150px; }
+  .mainBooks .books__submit {
+    font-family: fontawesome;
+    border-radius: 50%;
+    border: none;
+    padding: .6rem .5rem;
+    margin-left: 1rem;
+    background-color: #F0B46A; }
+  .mainBooks .books__book {
+    display: inline-block;
+    padding: 0 4rem 3rem 0;
+    width: 365px; }
+    .mainBooks .books__book img {
+      padding-top: .5rem; }
+  .mainBooks .books__title {
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: black;
+    padding-right: 2rem;
+    font-weight: 300;
+    width: 300px;
+    display: inline-block; }
+  .mainBooks .books__author {
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    display: block;
+    padding-top: .5rem; }
+  .mainBooks .books__author:hover, .mainBooks .books__author:focus {
+    color: #F0B46A; }
+
+.mainAuthors .authors {
+  margin-left: 18%; }
+  .mainAuthors .authors__title {
+    font-size: 5rem;
+    padding: 4rem 0 1rem 0;
+    border-bottom: 1px solid orange;
+    margin-bottom: 3rem;
+    font-family: 'Honey Script';
+    letter-spacing: 2px;}
+  .mainAuthors .authors__item {
+    display: inline-block;
+    padding: 0 4rem 3rem 0;
+    width: 280px;  }
+    .mainAuthors .authors__item img {
+      padding-top: .5rem; }
+  .mainAuthors .authors__author {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    padding-right: 2rem;
+    display: block;
+    font-weight: 300; }
+  .mainAuthors .authors__profile {
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    display: block;
+    padding-top: .5rem; }
+
+.mainEditors .editors {
+  margin-left: 18%; }
+  .mainEditors .editors__title {
+    font-size: 5rem;
+    padding: 4rem 0 1rem 0;
+    border-bottom: 1px solid orange;
+    margin-bottom: 3rem;
+    font-family: 'Honey Script';
+    letter-spacing: 2px; }
+  .mainEditors .editors__item {
+    padding-top: 1rem; }
+  .mainEditors .editors__editor {
+    color: black;
+    font-size: 2rem;
+    text-decoration: none; }
+
+.categories__head {
+  font-size: 5rem;
+  padding: 4rem 0 1rem 0;
+  border-bottom: 1px solid orange;
+  margin-bottom: 3rem;
+  font-family: 'Honey Script';
+  letter-spacing: 2px;
+  margin-left: 18%; }
+
+.categories__category {
+  margin-left: 18%;
+  width: 60%;
+  padding-bottom: 2.5rem; }
+
+.categories__title {
+  text-decoration: none;
+  font-size: 2rem;
+  padding-right: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem; }
+
+.categories__link {
+  text-decoration: none;
+  color: black; }
+
+.categories__intro {
+  line-height: 1.5; }
+
+.mainBook {
+  margin-left: 35%; }
+  .mainBook .book__title {
+    font-size: 5rem;
+    padding: 6rem 0 1rem 0;
+    border-bottom: 1px solid orange;
+    margin-bottom: 3rem;
+    font-family: 'Honey Script';
+    letter-spacing: 2px; }
+  .mainBook .book__profil img {
+    margin-left: -85%;
+    margin-top: -3rem; }
+  .mainBook .book__author {
+    text-decoration: none;
+    color: orange;
+    font-size: 1.6rem;
+    padding-bottom: .6rem;
+    display: inline-block; }
+  .mainBook .book__author:hover, .mainBook .book__author:focus {
+    color: #AC3F5B; }
+  .mainBook .book__text {
+    font-size: 1.3rem;
+    line-height: 1.4; }
+  .mainBook .book__edited {
+    font-size: 1.1rem;
+    padding-bottom: 1.4rem;
+    font-style: italic; }
+  .mainBook .book__editor {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: orange; }
+
+.mainAuthor {
+  margin-left: 35%; }
+  .mainAuthor .author__head {
+    font-size: 5rem;
+    padding: 6rem 0 1rem 0;
+    border-bottom: 1px solid orange;
+    margin-bottom: 3rem;
+    font-family: 'Honey Script';
+    letter-spacing: 2px; }
+  .mainAuthor .author img {
+    margin-left: -85%;
+    margin-top: -3rem; }
+  .mainAuthor .author__text {
+    font-size: 1.3rem;
+    line-height: 1.4; }
+  .mainAuthor .author__title {
+    font-size: 1.5rem;
+    padding: 2rem 0 1rem;
+    color: orange; }
+  .mainAuthor .author__list {
+    list-style-type: disc; }
+  .mainAuthor .author__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black; }
+
+.mainEditor .editor {
+  margin-left: 18%; }
+  .mainEditor .editor__head {
+    font-size: 5rem;
+    padding: 6rem 0 1rem 0;
+    border-bottom: 1px solid orange;
+    margin-bottom: 3rem;
+    font-family: 'Honey Script';
+    letter-spacing: 2px; }
+  .mainEditor .editor__text {
+    font-size: 1.3rem;
+    line-height: 1.4; }
+  .mainEditor .editor__book {
+    float: left;
+    margin-right: 6rem; }
+  .mainEditor .editor__author {
+    float: left; }
+  .mainEditor .editor__title {
+    font-size: 1.5rem;
+    padding: 3rem 0 1rem;
+    color: orange; }
+  .mainEditor .editor__list {
+    list-style-type: disc; }
+  .mainEditor .editor__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black; }
+
+.mainCategory .category {
+  margin-left: 18%; }
+  .mainCategory .category__head {
+    font-size: 5rem;
+    padding: 6rem 0 1rem 0;
+    border-bottom: 1px solid orange;
+    margin-bottom: 3rem;
+    font-family: 'Honey Script';
+    letter-spacing: 2px; }
+  .mainCategory .category__text {
+    font-size: 1.3rem;
+    line-height: 1.4; }
+  .mainCategory .category__title {
+    font-size: 1.5rem;
+    padding: 2.5rem 0 1rem;
+    color: orange; }
+  .mainCategory .category__list {
+    list-style-type: disc; }
+  .mainCategory .category__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black; }
+
+.mainSign {
+  margin: 0 auto;
+  margin-bottom: 4rem; }
+  .mainSign .sign__head {
+    font-size: 5rem;
+    padding: 4rem 0 1rem 0;
+    border-bottom: 1px solid orange;
+    margin-bottom: 3rem;
+    font-family: 'Honey Script';
+    letter-spacing: 1px; }
+  .mainSign .sign__form {
+    background-color: rgba(241, 234, 218, 0.5);
+    padding: 2rem 1.5rem 3rem;
+    border-radius: .5rem; }
+  .mainSign .sign__label {
+    text-transform: uppercase;
+    display: block;
+    font-weight: 300;
+    padding: 0 0 .5rem 1.5rem; }
+  .mainSign .sign__input {
+    width: 100%;
+    border-radius: 10rem;
+    border: none;
+    background-color: rgba(255, 165, 0, 0.4);
+    padding: .5rem 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem; }
+  .mainSign .sign__check {
+    margin-bottom: 1rem;
+    margin-left: 1.5rem; }
+  .mainSign .sign__submit {
+    text-transform: uppercase;
+    display: block;
+    background-color: orange;
+    width: 100%;
+    border: none;
+    border-radius: 10rem;
+    padding: .5rem 1.5rem;
+    color: white;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    font-size: 1.2rem; }
+
+.mainAdmin {
+  margin: 0 auto;
+  margin-bottom: 4rem; }
+  .mainAdmin .new__head {
+    font-size: 4rem;
+    padding: 4rem 0 1rem 0;
+    border-bottom: 1px solid orange;
+    margin-bottom: 3rem;
+    font-family: 'Honey Script';
+    letter-spacing: 1px; }
+  .mainAdmin .new__form {
+    background-color: rgba(241, 234, 218, 0.5);
+    padding: 2rem 1.5rem 3rem;
+    border-radius: .5rem; }
+  .mainAdmin .new__label {
+    text-transform: uppercase;
+    display: block;
+    font-weight: 300;
+    padding: 0 0 .5rem 1.5rem; }
+  .mainAdmin .new__input {
+    width: 100%;
+    border-radius: 10rem;
+    border: none;
+    background-color: rgba(255, 165, 0, 0.4);
+    padding: .5rem 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem; }
+  .mainAdmin .new__textarea {
+    width: 100%;
+    background-color: rgba(255, 165, 0, 0.4);
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 2rem;
+    resize: none;
+    font-family: 'Raleway', sans-serif;
+    color: #746241; }
+  .mainAdmin .new__submit {
+    text-transform: uppercase;
+    display: block;
+    background-color: orange;
+    width: 100%;
+    border: none;
+    border-radius: 10rem;
+    padding: .5rem 1.5rem;
+    color: white;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    font-size: 1.2rem; }
+
+/*# sourceMappingURL=styles.css.map */
